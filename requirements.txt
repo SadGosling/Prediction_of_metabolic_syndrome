@@ -10,3 +10,4 @@ scikit_learn==1.2.2
 seaborn==0.13.2
 shap==0.46.0
 xgboost==2.1.2
+lightautoml==0.3.8.1
