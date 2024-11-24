@@ -1,4 +1,5 @@
 def param_search_lgbm(trial):
+    """Функция, отвечающая за подбор параметров LGBMClassifier для Optuna"""
     params = {
         "learning_rate": trial.suggest_float("learning_rate", 1e-3, 0.1, log=True),
         "max_depth": trial.suggest_int("max_depth", 100, 500),
