@@ -1,4 +1,5 @@
 def select_features_add_del_boruta(x, y):
+    """Функция, возвращающая список признаков, отобранных алгоритмами ADD-DEL и Boruta"""
     sfs = SequentialFeatureSelector(
         XGBClassifier(),  # represents the classifier
         k_features=5,
