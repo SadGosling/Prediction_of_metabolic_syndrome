@@ -1,4 +1,5 @@
 def get_best_rfc(x_train_imp, y_train):
+    """Функция, возвращающая наиболее оптимальную модель RFClassifier на основе алгоритма Optuna"""
     study_rf = optuna.create_study(direction='maximize')
     study_rf.optimize(param_search_rfc, n_trials=30)
     rfc_best = RandomForestClassifier(n_estimators = study_rf.best_params['n_estimators'],
