@@ -1,4 +1,5 @@
 def param_search_xgb_rfc(trial):
+    """Функция, отвечающая за подбор параметров XGBRFClassifier для Optuna"""
     params = {
         "max_depth": trial.suggest_int("max_depth", 3, 10),
         "n_estimators": trial.suggest_int("n_estimators", 100, 1000, 100),
