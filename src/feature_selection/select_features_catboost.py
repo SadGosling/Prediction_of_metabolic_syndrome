@@ -1,4 +1,5 @@
 def select_features_catboost(x, y,):
+    """Функция, возвращающая список признаков, отобранных методом get_feature_importance из CatBoostClassifier"""
     model = CatBoostClassifier(random_seed=42)
     model.fit(
         x,
