@@ -1,4 +1,5 @@
 def get_best_xgbrfc(x_train, y_train):
+    """Функция, возвращающая наиболее оптимальную модель XGBRFClassifier на основе алгоритма Optuna"""
     study_xgb_rfc = optuna.create_study(direction='maximize')
     study_xgb_rfc.optimize(param_search_xgb_rfc, n_trials=30)
     xgb_rfc_best = XGBRFClassifier(criterion='log_loss',
