@@ -1,5 +1,5 @@
 def param_search_cb(trial):
-    "Функция, отвечающая за подбор параметров CatBoostClassifier для Optuna"
+    """Функция, отвечающая за подбор параметров CatBoostClassifier для Optuna"""
     params = {
         "iterations": 1000,
         "learning_rate": trial.suggest_float("learning_rate", 1e-3, 0.1, log=True),
