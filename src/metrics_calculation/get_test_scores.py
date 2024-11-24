@@ -1,4 +1,5 @@
 def get_test_scores(model, x_test, y_test):
+  """Функция, возвращающая значения метрик на переданной выборке"""
   y_pred = model.predict(x_test)
   round_num = 2
   result_dict = {
