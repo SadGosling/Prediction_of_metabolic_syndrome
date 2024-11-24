@@ -1,4 +1,5 @@
 def get_train_cv_scores(model, x_train, y_train):
+    """Функция, возвращающая значения метрик при кросс-валидации на тренировочной выборке"""
     scoring = ['accuracy','precision_macro', 'recall_macro', 'f1_macro', 'roc_auc']
     cv_scores = cross_validate(model, x_train, y_train, scoring=scoring)
     metrics = ['test_accuracy', 'test_roc_auc', 'test_precision_macro', 'test_recall_macro', 'test_f1_macro']
