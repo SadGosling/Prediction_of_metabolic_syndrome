@@ -1,4 +1,5 @@
 def get_best_lgbm(x_train, y_train):
+    """Функция, возвращающая наиболее оптимальную модель LGBMClassifier на основе алгоритма Optuna"""
     study_lgbm = optuna.create_study(direction='maximize')
     study_lgbm.optimize(param_search_lgbm, n_trials=30)
     lgbm_best = LGBMClassifier(learning_rate=study_lgbm.best_params['learning_rate'],
