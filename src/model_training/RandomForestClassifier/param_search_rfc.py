@@ -1,4 +1,5 @@
 def param_search_rfc(trial):
+    """Функция, отвечающая за подбор параметров RandomForestClassifier для Optuna"""
     params = {
         "criterion": 'log_loss',
         "max_depth": trial.suggest_int("max_depth", 3, 10),
