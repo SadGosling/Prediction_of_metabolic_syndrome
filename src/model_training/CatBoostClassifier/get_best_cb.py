@@ -1,4 +1,5 @@
 def get_best_cb(x_train, y_train):
+    """Функция, возвращающая наиболее оптимальную модель CatBoostClassifier на основе алгоритма Optuna"""
     study_cb = optuna.create_study(direction='maximize')
     study_cb.optimize(param_search_cb, n_trials=30)
     cb_best = CatBoostClassifier(learning_rate=study_cb.best_params['learning_rate'],
